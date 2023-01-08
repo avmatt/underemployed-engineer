@@ -1,0 +1,71 @@
+<div class="h-screen flex justify-center items-center">
+  <div class="flex gap-16">
+    <div id="photos" class="flex flex-col items-center">
+      <img
+        src="20220827.png"
+        class="z-10 w-96 border-8 border-white drop-shadow-xl -rotate-12"
+      />
+      <img
+        src="20220917.png"
+        class="w-64 -mt-24 ml-12 border-8 border-white drop-shadow-xl rotate-6"
+      />
+    </div>
+    <div class="pt-8">
+      <div class="text-4xl">Matt Peterse</div>
+      <div class="text-black/50 mb-4">MAT PEE&bull;trz &nbsp; He/Him</div>
+      <div class="-ml-2 mb-4">
+        <a href="tel:7322782456" class="p-2 text-blue-500">(732)278-2456</a><br
+        />
+        <a href="mailto:matthew.peterse@gmail.com" class="p-2 text-blue-500"
+          >matthew.peterse@gmail.com</a
+        >
+      </div>
+      <div class="border border-black rounded-sm p-2 -ml-2 mb-4">
+        10 years experience<br />
+        Seeking full-time employment
+      </div>
+      <ul class="mb-4">
+        <li>Wife, dog, cats</li>
+        <li>Music, movies, games</li>
+        <li>Glass half full</li>
+        <li>Jersey Shore, USA</li>
+      </ul>
+      <div>
+        <a href="#" class="text-4xl px-2 py-1"
+          ><i class="fa-brands fa-github"></i></a
+        >
+        <a href="#" class="text-4xl px-2 py-1"
+          ><i class="fa-brands fa-linkedin"></i></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import gsap from "gsap";
+
+  var photosTop = 0;
+  handleResize();
+
+  function handleResize() {
+    var el = document.getElementById("photos");
+    if (el) {
+      photosTop = el.offsetTop;
+    }
+  }
+
+  addEventListener("resize", handleResize);
+
+  addEventListener("scroll", function () {
+    console.log(photosTop);
+    gsap.to("#photos > img:nth-child(1)", {
+      duration: 0.2,
+      transform: `rotate(${(window.scrollY - photosTop) / -150 - 18}deg)`,
+    });
+    gsap.to("#photos > img:nth-child(2)", {
+      duration: 0.2,
+      transform: `rotate(${(window.scrollY - photosTop) / 100 + 9}deg)`,
+    });
+  });
+</script>

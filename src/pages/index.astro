@@ -1,90 +1,29 @@
 ---
-import Head from "../components/Head.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Work from "../components/Work.astro";
+import Experience from "../components/Experience.astro";
+import About from "../components/About.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
-<html lang="en">
-  <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-
-  <body class="cursor-none">
-    <div
-      id="pointer"
-      class="fixed z-50 rounded-full border-2 border-dashed border-black pointer-events-none"
-    >
-    </div>
-    <Header />
-
-    <div class="h-screen flex justify-center items-center">
-      <h1>Hiya! Matt here</h1>
-    </div>
-
-    <div id="work" class="grid grid-cols-3 gap-8 p-8">
-      <div class="flex flex-col gap-8 -mt-20">
-        <a
-          class="w-full h-72 bg-center bg-cover bg-[url('https://cdn.smehost.net/acdccom-uscolumbiaprod/wp-content/uploads/2021/05/3.jpg')]"
-        >
-        </a>
-        <a
-          class="w-full h-96 bg-center bg-cover bg-[url('https://pbs.twimg.com/media/FPPIjUeWUAMwihq?format=jpg&name=large')]"
-        >
-        </a>
-        <a
-          class="w-full h-80 bg-center bg-cover bg-[url('https://aolkvnzdmq.cloudimg.io/v7/www.airvet.com/wp-content/uploads/2022/09/AdobeStock_390129726-Large.jpeg')]"
-        >
-        </a>
+<MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="h-screen flex justify-center items-center">
+    <div class="pb-36 text-center">
+      <div class="text-5xl mb-14">Hiya 👋 Matt here</div>
+      <div class="text-3xl mb-12">
+        I'm a passionate and<br />driven software engineer<br />looking for a
+        new gig
       </div>
-      <div class="flex flex-col gap-8 -mt-40">
-        <a
-          class="w-full h-96 bg-center bg-cover bg-[url('https://ca-times.brightspotcdn.com/dims4/default/18a2189/2147483647/strip/true/crop/3559x2847+0+0/resize/1200x960!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F04%2F89%2F6f1906ce46bd8a70d4a70935ddb3%2Fmusic-bruce-springsteen-42437.jpg')]"
-        >
-        </a>
-        <a
-          class="w-full h-80 bg-center bg-cover bg-[url('https://aolkvnzdmq.cloudimg.io/v7/www.airvet.com/wp-content/uploads/2022/09/AdobeStock_390129726-Large.jpeg')]"
-        >
-        </a>
-        <a
-          class="w-full h-72 bg-center bg-cover bg-[url('https://cdn.smehost.net/acdccom-uscolumbiaprod/wp-content/uploads/2021/05/3.jpg')]"
-        >
-        </a>
-      </div>
-      <div class="flex flex-col gap-8 -mt-28">
-        <a
-          class="w-full h-80 bg-center bg-cover bg-[url('https://aolkvnzdmq.cloudimg.io/v7/www.airvet.com/wp-content/uploads/2022/09/AdobeStock_390129726-Large.jpeg')]"
-        >
-        </a>
-        <a
-          class="w-full h-96 bg-center bg-cover bg-[url('https://ca-times.brightspotcdn.com/dims4/default/18a2189/2147483647/strip/true/crop/3559x2847+0+0/resize/1200x960!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F04%2F89%2F6f1906ce46bd8a70d4a70935ddb3%2Fmusic-bruce-springsteen-42437.jpg')]"
-        >
-        </a>
-        <a
-          class="w-full h-72 bg-center bg-cover bg-[url('https://cdn.smehost.net/acdccom-uscolumbiaprod/wp-content/uploads/2021/05/3.jpg')]"
-        >
-        </a>
-      </div>
+      <a
+        href="mailto:matthew.peterse@gmail.com"
+        class="text-lg p-2 text-black/50 hover:text-black"
+      >
+        (let me know if you hear anything)
+      </a>
     </div>
+  </div>
 
-    <div class="h-screen flex justify-center items-center">
-      <h1>Hiya! Matt here</h1>
-    </div>
-
-    <Footer />
-
-    <script>
-      import gsap from "gsap";
-
-      addEventListener("scroll", function () {
-        gsap.to("#work div:nth-child(1)", {
-          duration: 0.2,
-          transform: `translate(0, ${window.scrollY * -0.135}px)`,
-        });
-        gsap.to("#work div:nth-child(3)", {
-          duration: 0.2,
-          transform: `translate(0, ${window.scrollY * -0.08}px)`,
-        });
-      });
-    </script>
-  </body>
-</html>
+  <Work />
+  <Experience />
+  <About />
+</MainLayout>

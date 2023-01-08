@@ -2,17 +2,15 @@
 import { SITE_TITLE } from "../config";
 ---
 
-<header class="fixed w-full flex justify-between p-3 bg-white z-10">
-  <h2 class="text-lg uppercase">
-    {SITE_TITLE}
-  </h2>
-  <nav>
-    <a class="mr-2" href="/">Home</a>
-    <a class="mr-2" href="/work">Work</a>
-    <a class="mr-2" href="/about">About</a>
-    <a class="mr-2" href="https://github.com/withastro/astro" target="_blank">
-      GitHub</a
-    >
-    <a href="https://github.com/withastro/astro" target="_blank"> LinkedIn</a>
+<header class="fixed w-full flex justify-between p-1 bg-white/95 z-20">
+  <a href="#" class="p-2">
+    <h2 class="text-lg uppercase">
+      {SITE_TITLE}
+    </h2>
+  </a>
+  <nav class="p-2">
+    <a class="p-2" href="/work">Work</a>
+    <a class="p-2" href="/work">Experience</a>
+    <a class="p-2" href="/about">About</a>
   </nav>
 </header>
