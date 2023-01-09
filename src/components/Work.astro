@@ -1,5 +1,5 @@
 <div id="work" class="grid md:grid-cols-3 gap-6 p-8 pt-12 pb-32 -mt-48">
-  <div class="flex flex-col gap-6 mt-20">
+  <div class="flex flex-col gap-6 mt-20 opacity-0 translate-y-24">
     <a class="p-2" href="https://www.acdc.com" target="_blank" rel="noopener">
       <div class="relative flex justify-center items-end w-full aspect-[3/2]">
         <div
@@ -155,7 +155,7 @@
     </a>
   </div>
 
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6 opacity-0 translate-y-24">
     <a
       class="p-2"
       href="https://brucespringsteen.net/"
@@ -288,7 +288,7 @@
     </a>
   </div>
 
-  <div class="flex flex-col gap-6 mt-12">
+  <div class="flex flex-col gap-6 mt-12 opacity-0 translate-y-24">
     <a
       class="p-2"
       href="https://www.airvet.com/"
@@ -436,6 +436,18 @@
 <script>
   import gsap from "gsap";
 
+  gsap.to("#work > div", {
+    duration: 2,
+    delay: 2,
+    ease: "expo",
+    stagger: {
+      from: "random",
+      each: 0.2,
+    },
+    opacity: 1,
+    y: 0,
+  });
+
   addEventListener("scroll", handleScroll);
   handleScroll();
 
@@ -462,7 +474,6 @@
         ),
         0
       );
-      console.log(delta);
       gsap.to(el.children, {
         y: (delta - 0.5) * 100,
       });
