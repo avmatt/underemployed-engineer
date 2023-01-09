@@ -23,34 +23,34 @@ const { title, description } = Astro.props;
     <script>
       import gsap from "gsap";
 
-      // gsap.from("#header", {
-      //   duration: 2,
-      //   delay: 2,
-      //   ease: "expo",
-      //   opacity: 0,
-      //   y: -10,
-      // });
+      gsap.from("#header", {
+        duration: 2,
+        delay: 2,
+        ease: "expo",
+        opacity: 0,
+        y: -10,
+      });
 
-      // gsap.from("#home > div", {
-      //   duration: 2,
-      //   delay: 1,
-      //   ease: "expo",
-      //   opacity: 0,
-      //   y: 30,
-      //   scale: 0.9,
-      // });
+      gsap.from("#home > div", {
+        duration: 2,
+        delay: 1,
+        ease: "expo",
+        opacity: 0,
+        y: 30,
+        scale: 0.9,
+      });
 
-      // gsap.from("#work > div", {
-      //   duration: 2,
-      //   delay: 2,
-      //   ease: "expo",
-      //   stagger: {
-      //     from: "random",
-      //     each: 0.2,
-      //   },
-      //   y: 100,
-      //   opacity: 0,
-      // });
+      gsap.from("#work > div", {
+        duration: 2,
+        delay: 2,
+        ease: "expo",
+        stagger: {
+          from: "random",
+          each: 0.2,
+        },
+        y: 100,
+        opacity: 0,
+      });
 
       var mouseX = 0,
         mouseY = 0;
