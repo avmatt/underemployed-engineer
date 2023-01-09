@@ -21,7 +21,7 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
   />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap"
   />
   <link rel="canonical" href={canonicalURL} />
 
@@ -41,8 +41,5 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-  <script
-    src="https://kit.fontawesome.com/984af4de60.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://kit.fontawesome.com/984af4de60.js"></script>
 </head>

@@ -2,15 +2,18 @@
 import { SITE_TITLE } from "../config";
 ---
 
-<header class="fixed w-full flex justify-between p-1 bg-white/95 z-20">
-  <a href="#" class="p-2">
+<header
+  id="header"
+  class="fixed w-full flex flex-col sm:flex-row justify-between items-center p-1 bg-white/95 z-20"
+>
+  <a href="#home" class="p-2">
     <h2 class="text-lg uppercase">
       {SITE_TITLE}
     </h2>
   </a>
-  <nav class="p-2">
-    <a class="p-2" href="/work">Work</a>
-    <a class="p-2" href="/work">Experience</a>
-    <a class="p-2" href="/about">About</a>
+  <nav class="sm:p-2">
+    <a class="p-2" href="#work">Work</a>
+    <a class="p-2" href="#experience">Experience</a>
+    <a class="p-2" href="#about">About</a>
   </nav>
 </header>
