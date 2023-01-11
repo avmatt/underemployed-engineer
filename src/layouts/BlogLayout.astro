@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const {
+  frontmatter: { title, description },
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="max-w-5xl mx-auto py-20 prose">
+    {title}
+    <slot />
+  </div>
+</BaseLayout>

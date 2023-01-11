@@ -3,5 +3,11 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: "https://underemplpoyed.engineer",
-  integrations: [tailwind()],
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+  ],
 });
