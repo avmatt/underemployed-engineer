@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+code::before {
+  content: "" !important;
+}
+code {
+  color: rgb(252, 41, 119) !important;
+}
+code::after {
+  content: "" !important;
+}

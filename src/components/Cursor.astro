@@ -1,6 +1,6 @@
 <div
   id="cursor"
-  class="fixed w-px h-px z-40 rounded-full bg-black/10 rounded-t-full pointer-events-none"
+  class="fixed w-px h-px z-40 rounded-full bg-black/10 pointer-events-none"
 >
 </div>
 
@@ -25,7 +25,7 @@
     });
   });
 
-  addEventListener("scroll", function (event) {
+  addEventListener("scroll", function () {
     gsap.to("#cursor", {
       duration: 1,
       ease: "elastic",
