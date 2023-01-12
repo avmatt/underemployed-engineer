@@ -21,7 +21,7 @@ My design was heavily inspired by the functionality of <a href="https://pavellap
 
 **Next was to display the shaded circle.** I added a `mousemove` event listener and updated css variables for the cursor's coordinates. This worked really well. Here's what we have so far:
 
-<img class="mx-auto mt-10 border rounded-md" src="../../../public/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-1.gif" />
+<img class="mx-auto mt-10 border rounded-md" src="/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-1.gif" />
 
 <div class="text-xs -mb-5">HTML</div>
 
@@ -70,7 +70,7 @@ So far the cursor was centered using a left and top margin of `-10px` to offset 
 
 Here's where we're at now:
 
-<img class="mx-auto mt-20 border rounded-md" src="../../../public/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-2.gif" />
+<img class="mx-auto mt-20 border rounded-md" src="/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-2.gif" />
 
 <div class="text-xs mt-5 -mb-5">HTML</div>
 
@@ -155,7 +155,7 @@ After some quick cleanup and combining some redundant code into an `updateCursor
 
 Here's the final result!
 
-<img class="mx-auto mt-10 border rounded-md" src="../../../public/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-3.gif" />
+<img class="mx-auto mt-10 border rounded-md" src="/assets/posts/ipad-inspired-mouse-pointer-on-web-with-css-variables/screen-recording-3.gif" />
 
 <div class="text-xs mt-5 -mb-5">HTML</div>
 
